@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import location from '../icons/round_place_white_24dp.png'
-import './SearchInput.css';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import {
     geocodeByAddress,

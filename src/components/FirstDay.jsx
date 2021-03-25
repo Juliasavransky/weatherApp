@@ -1,5 +1,4 @@
 import React from 'react';
-import './FirstDay.css';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import location from '../icons/outline_location_on_black_24dp.png'

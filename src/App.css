@@ -2,9 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  
 }
-body{
+body {
   background-color: #100e1d;
 }
 
@@ -17,7 +16,6 @@ body{
   margin: 0;
   /* background-color: #5a509c; */
   color: #fff;
-  
 }
 
 img {
@@ -49,7 +47,7 @@ img {
 .search-box {
   display: inline-block;
   font-weight: 500;
-  padding: 0.35em ;
+  padding: 0.35em;
   border-radius: 10px;
   width: 90%;
   flex-wrap: wrap;
@@ -69,11 +67,9 @@ img {
   flex: 3 auto;
   flex-wrap: wrap;
 }
-.location img{
+.location img {
   margin: 00 0 -0.2em;
-  margin-left: 0.4em ;
-
-
+  margin-left: 0.4em;
 }
 .container--degreeToggle {
   display: flex;
@@ -104,7 +100,7 @@ img {
 .container--items__cardMainWrap {
   position: relative;
   height: 100%;
-  min-width:  30em;
+  max-width: 30em;
   background-color: #1e213a;
   /* border: #fff 1px solid; */
 }
@@ -210,22 +206,21 @@ img {
   height: 100%;
   border-radius: 100px;
 }
-.humidity-bar__num{
+.humidity-bar__num {
   width: 100%;
   display: flex;
   justify-content: space-around;
   /* border: white solid 1px; */
-
 }
-.humidity-bar__num >span{
+.humidity-bar__num > span {
   font-size: 0.8rem;
   width: 100%;
 }
-.humidity-bar__num >span:first-child{
+.humidity-bar__num > span:first-child {
   margin-left: -2.5em;
 }
-.humidity-bar__num >span:last-child{
-  margin-right: -2.0em;
+.humidity-bar__num > span:last-child {
+  margin-right: -2em;
 }
 .card__small {
   /* border: rgb(226, 222, 230) solid 1px; */
@@ -283,16 +278,23 @@ img {
     display: inline;
     margin: 0 auto;
   }
+  .container--items__cardDate {
+    margin-bottom: 0;
+  }
+  .container--items__cardMainWrap {
+    max-width: 100%;
+    margin: 0 1em;
+    height: 100%;
+  }
   .card__big {
     width: 100%;
-    padding: 0.5em;
-    margin: 0.5em;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
   }
   .card__small {
     width: 100%;
-    padding: 0.5em;
-    margin: 0.5em;
-
+    padding: 0.5em 0;
+    margin: 0.5em 0;
   }
 
   .container--items__cardsBig {
@@ -314,13 +316,13 @@ img {
     margin: 1em auto;
   }
   .daysCard {
-    margin: 25px;
+    margin: 1em 0.5em;
   }
   .temps {
     display: flex;
   }
   .row {
-    margin: 1.2em;
-    padding: 2em;
+    margin: 1em 0.5em 0;
+    padding: 2em 0 0.5em 0;
   }
 }

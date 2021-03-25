@@ -1,6 +1,5 @@
 import React from 'react';
 import arrow from '../icons/round_navigation_white_36dp.png'
-import './FirstDayHightlights.css';
 
 
 
