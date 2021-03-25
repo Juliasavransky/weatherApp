@@ -1,38 +1,326 @@
-.App {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: #100e1d;
+}
+
+.app {
   text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+  /* background-color: #5a509c; */
+  color: #fff;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #23424a;
+  background-color: #38cfd9;
+  font-weight: 500;
+  padding: 0.75em 2em;
+  border-radius: 10px;
+  width: 25%;
 }
 
-@keyframes App-logo-spin {
+.btn:hover,
+.btn:focus,
+.degreeToggle:hover,
+.degreeToggle:focus {
+  opacity: 0.75;
+}
+
+.search-box {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.35em ;
+  border-radius: 10px;
+  width: 90%;
+  flex-wrap: wrap;
+  background-color: #6e707a;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.container--form {
+  width: 80%;
+  margin: 1em 0;
+}
+
+.location {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  /* border: steelblue 2px solid; */
+  flex: 3 auto;
+  flex-wrap: wrap;
+}
+.location img{
+  margin: 00 0 -0.2em;
+  margin-left: 0.4em ;
+
+
+}
+.container--degreeToggle {
+  display: flex;
+  font-size: 1.4rem;
+}
+.degreeToggle {
+  padding: 1.5em 0 0 1em;
+  font-weight: 900;
+}
+.row {
+  margin: 0 auto;
+  /* border: rgb(15, 238, 82) 1px solid; */
+}
+.col {
+  display: flex;
+  justify-content: space-around;
+}
+/* *************************************************** */
+
+/* ***********************Day 1**************************** */
+.container--items {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  text-align: center;
+  /* border: solid 5px rgb(240, 16, 240); */
+}
+.container--items__cardMainWrap {
+  position: relative;
+  height: 100%;
+  min-width:  30em;
+  background-color: #1e213a;
+  /* border: #fff 1px solid; */
+}
+.container--items__cardMainWrap::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.12;
+  background-image: url("./icons/Cloud-background.png");
+  background-repeat: repeat;
+  /* background-position: right center; */
+  background-size: cover;
+
+  animation-name: cloud;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+@keyframes cloud {
   from {
-    transform: rotate(0deg);
+    background-position: left center;
   }
   to {
-    transform: rotate(360deg);
+    background-position: right center;
+  }
+}
+
+.container--items__cardMainContent {
+  /* border: solid 1px rgb(14, 0, 14); */
+  position: relative;
+}
+.container--items__cardMainContent > img {
+  width: 350px;
+}
+.container--items__cardMainContent > h3 {
+  font-size: 4.5rem;
+  margin: 1rem;
+}
+.container--items__cardMainContent > h2 {
+  font-size: 3rem;
+}
+.container--items__cardDateToday {
+  font-size: 1.5rem;
+  display: block;
+}
+.container--items__cardDate {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 2em;
+}
+/* *************************Hightlights************************** */
+.container--items__cards > h1 {
+  text-align: left;
+  font-size: 2rem;
+  /* border: #fff solid 1px; */
+}
+.container--items__cards {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  /* border: rgb(46, 11, 247) solid 3px; */
+}
+.container--items__cardsBig {
+  display: flex;
+  /* border: rgb(236, 226, 226) 1px solid; */
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+.container--items__cardsSmall {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__big {
+  /* border: springgreen 1px solid; */
+  width: 45%;
+  background-color: #1e213a;
+}
+.card__big h3 {
+  font-size: 1rem;
+}
+.card__big h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+.card__big img {
+  max-width: 60px;
+}
+.card__big span {
+  font-size: 2rem;
+}
+
+.humidity-bar {
+  width: 80%;
+  height: 10px;
+  background-color: grey;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+.humidity-bar-active {
+  background-color: #ffec65;
+  height: 100%;
+  border-radius: 100px;
+}
+.humidity-bar__num{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* border: white solid 1px; */
+
+}
+.humidity-bar__num >span{
+  font-size: 0.8rem;
+  width: 100%;
+}
+.humidity-bar__num >span:first-child{
+  margin-left: -2.5em;
+}
+.humidity-bar__num >span:last-child{
+  margin-right: -2.0em;
+}
+.card__small {
+  /* border: rgb(226, 222, 230) solid 1px; */
+  width: 45%;
+  background-color: #1e213a;
+}
+.card__small h3 {
+  font-size: 1rem;
+}
+.card__small h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+.card__small span {
+  font-size: 2rem;
+}
+/* *********************4 Days ****************************** */
+
+.container--items__daysCard {
+  display: flex;
+  margin: 0;
+  /* border: #fff solid 1px; */
+}
+.daysCard {
+  margin: 0 15px 0 0;
+  padding: 25px 35px 10px;
+  background-color: #1e213a;
+  /* border: #fff solid 1px; */
+}
+.daysCard img {
+  width: 6em;
+}
+.daysCard__Date,
+.temp-max,
+.temp-min {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.temp-min {
+  color: #a09fb1;
+}
+
+/* *************************************************** */
+/* more then 800px 
+@media (min-width: 800px) {
+} */
+
+/* more then 800px */
+@media (max-width: 600px) {
+  .container {
+    display: inline;
+  }
+  .col {
+    display: inline;
+    margin: 0 auto;
+  }
+  .card__big {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+  .card__small {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em;
+
+  }
+
+  .container--items__cardsBig {
+    display: inline;
+  }
+  .container--items__cardsSmall {
+    display: inline;
+  }
+  .container--items__daysCard {
+    display: inline;
+  }
+  .container--items h1 {
+    text-align: center;
+  }
+  .container--degreeToggle {
+    justify-content: center;
+  }
+  .container--form {
+    margin: 1em auto;
+  }
+  .daysCard {
+    margin: 25px;
+  }
+  .temps {
+    display: flex;
+  }
+  .row {
+    margin: 1.2em;
+    padding: 2em;
   }
 }
