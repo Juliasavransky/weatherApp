@@ -1,16 +1,16 @@
 ### This a weather app using an openweathermap API
-#### User can request my current location weather
-#### User can see city weather as default, preferably my current location
-#### User can search for city
-#### User can see weather of today and the next 4 days
-#### User can see the date and location of the weather
-#### User can see according to image for each type of weather
-#### User can see the min and max degree each day
-#### User can see wind status and wind direction
-#### User can see humidity percentage
-#### User can see a visibility indicator
-#### User can see the air pressure number
-#### User can convert temperature in Celcius to Fahrenheit
+##### User can request my current location weather
+##### User can see city weather as default, preferably my current location
+##### User can search for city
+##### User can see weather of today and the next 4 days
+##### User can see the date and location of the weather
+##### User can see according to image for each type of weather
+##### User can see the min and max degree each day
+##### User can see wind status and wind direction
+##### User can see humidity percentage
+##### User can see a visibility indicator
+##### User can see the air pressure number
+##### User can convert temperature in Celcius to Fahrenheit
 
 # Getting Started with Create React App
 
