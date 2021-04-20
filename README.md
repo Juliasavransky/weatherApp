@@ -1,3 +1,5 @@
+![Weather App](https://user-images.githubusercontent.com/63636407/115467891-e93faf80-a23a-11eb-8b71-707f6eee5373.jpg)
+
 ### This a weather app using an openweathermap API
 ##### User can request my current location weather
 ##### User can see city weather as default, preferably my current location
