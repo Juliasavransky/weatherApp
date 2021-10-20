@@ -1,9 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import 'moment-timezone';
-import location from '../icons/outline_location_on_black_24dp.png'
-
-
+const REACT_APP_IMG = process.env.REACT_APP_IMG;
 
 
 const FirstDay = ({ firstDay, degreeType, isLoading, }) => {
@@ -26,9 +24,10 @@ const FirstDay = ({ firstDay, degreeType, isLoading, }) => {
             <div className="container--items__cardMainWrap">
                 <div className="container--items__cardMainContent">
 
-                    <img src={`http://openweathermap.org/img/wn/${firstDay.weather[0].icon}@2x.png`} />
-                    <h3> {degreeType === "celsius" ? celsius(Math.round(firstDay.main.temp)) + "°C" : fahrenheit(Math.round(firstDay.main.temp)) + "°F"}</h3>
-                    <h2>{firstDay.weather[0].description}</h2>
+                    <img alt="" src={`${REACT_APP_IMG}${firstDay.weather[0].icon}@2x.png`} />
+                    <div className="firstDay-degree"> {degreeType === "celsius" ? celsius(Math.round(firstDay.main.temp)) 
+                    + "°C" : fahrenheit(Math.round(firstDay.main.temp)) + "°F"}</div>
+                    <div className="firstDay-wDescription">{firstDay.weather[0].description}</div>
                     <div className="container--items__cardDateToday">
                         <Moment format=" [ Today ] • " unix>{firstDay.dt}</Moment>
                     </div>
@@ -38,7 +37,6 @@ const FirstDay = ({ firstDay, degreeType, isLoading, }) => {
 
                 </div>
             </div>
-
         </div>
     )
 

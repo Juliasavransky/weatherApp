@@ -1,9 +1,15 @@
 import React from 'react';
 import Moment from 'react-moment';
 import 'moment-timezone';
+const REACT_APP_IMG = process.env.REACT_APP_IMG;
 
 
-const DayCard = ({ reading: items, degreeType, isLoading }) => {
+
+const DaysCard = ({
+    reading: items,
+    degreeType,
+    isLoading
+}) => {
 
 
     const fahrenheit = (num) => {
@@ -31,7 +37,7 @@ const DayCard = ({ reading: items, degreeType, isLoading }) => {
                             <div className="row daysCard" key={item.dt}>
                                 <div className="daysCard__Date"><Moment format="ddd , Do MMM " unix>{item.dt}</Moment></div>
 
-                                <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} />
+                                <img alt="" src={`${REACT_APP_IMG}${item.weather[0].icon}@2x.png`} />
                                 <div className="col temps">
                                     <h3 className="temp-max"> {degreeType === "celsius" ? celsius(Math.round(item.main.feels_like))
                                         + "°C" : fahrenheit(Math.round(item.main.feels_like)) + "°F"}
@@ -48,5 +54,5 @@ const DayCard = ({ reading: items, degreeType, isLoading }) => {
 
 }
 
-export default DayCard;
+export default DaysCard;
 

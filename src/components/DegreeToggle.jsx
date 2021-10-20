@@ -1,13 +1,15 @@
 import React from 'react';
 
-const DegreeToggle = ({ toggleUnits, degreeType }) => {
+const DegreeToggle = ({ 
+    toggleUnits, 
+    degreeType 
+}) => {
     return (
         <div 
         className="container--degreeToggle "
         >
             <div className="degreeToggle ">
                 <input
-                    
                     type="radio"
                     name="degree-type"
                     id="celsius"
@@ -20,8 +22,8 @@ const DegreeToggle = ({ toggleUnits, degreeType }) => {
                     
                     type="radio"
                     name="degree-type"
-                    id="farenheit"
-                    value="farenheit"
+                    id="fahrenheit"
+                    value="fahrenheit"
                     onChange={toggleUnits}
                     checked={degreeType === "fahrenheit"}
                 ></input> °F

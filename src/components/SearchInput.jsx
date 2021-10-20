@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-import location from '../icons/round_place_white_24dp.png'
+// const REACT_APP_GOOGLE_MAPS_API = process.env.REACT_APP_GOOGLE_MAPS_API;
 import PlacesAutocomplete from 'react-places-autocomplete';
 import {
     geocodeByAddress,
@@ -11,7 +10,14 @@ import {
 
 
 const SearchInput =
-    ({ handleChange, handleSubmit, city, fullData, isLoading, hendleSelect }) => {
+    ({
+        handleChange,
+        handleSubmit,
+        city,
+        fullData,
+        isLoading,
+        handleSelect
+    }) => {
         const [address, setAddress] = useState(null);
         const [cords, setCords] = useState({
             lat: null,
@@ -75,18 +81,6 @@ const SearchInput =
                         value={city}
                         placeholder="Enter City"
                     />
-
-                    <h2 className="location">
-                        {isLoading ? city : fullData.city.name + " , " + fullData.city.country}
-                        <img src={location} />
-                    </h2>
-
-                    {/* <button
-                        type="submit"
-                        value="city"
-                        className="btn">
-                        Check Weather
-                    </button> */}
                 </form>
 
 
