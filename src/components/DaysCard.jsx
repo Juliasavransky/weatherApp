@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import 'moment-timezone';
+import {celsius, fahrenheit} from '../utils/degrees'
 const REACT_APP_IMG = process.env.REACT_APP_IMG;
 
 
@@ -10,18 +11,6 @@ const DaysCard = ({
     degreeType,
     isLoading
 }) => {
-
-
-    const fahrenheit = (num) => {
-        let fahrenheit = Math.round(num)
-        return fahrenheit;
-    }
-
-    const celsius = (num) => {
-        let celsius = Math.round((num - 32) * (5 / 9))
-        return celsius;
-    }
-
     return isLoading ?
         (<h1>Loading...</h1>
         ) : (

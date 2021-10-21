@@ -86,12 +86,12 @@ const App = () => {
     <Fragment>
       <div className="container--input">
         <SearchInput
-          isLoading={isLoading}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          handleSelect={handleSelect}
+          isLoading={isLoading}
           fullData={fullData}
           city={city}
-          handleSelect={handleSelect}
         />
       </div>
 

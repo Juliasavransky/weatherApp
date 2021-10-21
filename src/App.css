@@ -93,7 +93,6 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.12;
   background-image: url('./icons/cloudsLine.png');
   background-repeat: initial;
   background-size: cover;

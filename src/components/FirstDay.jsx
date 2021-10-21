@@ -1,20 +1,15 @@
 import React from 'react';
 import Moment from 'react-moment';
 import 'moment-timezone';
+import {celsius,fahrenheit} from '../utils/degrees'
 const REACT_APP_IMG = process.env.REACT_APP_IMG;
 
 
-const FirstDay = ({ firstDay, degreeType, isLoading, }) => {
-    const fahrenheit = (num) => {
-        let fahrenheit = Math.round(num)
-        return fahrenheit;
-    }
-
-    const celsius = (num) => {
-        let celsius = Math.round((num - 32) * (5 / 9))
-        return celsius;
-    }
-
+const FirstDay = ({
+    firstDay,
+    degreeType,
+    isLoading,
+}) => {
     return isLoading ? (
         <h1>Loading!!!</h1>
     ) : (
@@ -25,8 +20,8 @@ const FirstDay = ({ firstDay, degreeType, isLoading, }) => {
                 <div className="container--items__cardMainContent">
 
                     <img alt="" src={`${REACT_APP_IMG}${firstDay.weather[0].icon}@2x.png`} />
-                    <div className="firstDay-degree"> {degreeType === "celsius" ? celsius(Math.round(firstDay.main.temp)) 
-                    + "°C" : fahrenheit(Math.round(firstDay.main.temp)) + "°F"}</div>
+                    <div className="firstDay-degree"> {degreeType === "celsius" ? celsius(Math.round(firstDay.main.temp))
+                        + "°C" : fahrenheit(Math.round(firstDay.main.temp)) + "°F"}</div>
                     <div className="firstDay-wDescription">{firstDay.weather[0].description}</div>
                     <div className="container--items__cardDateToday">
                         <Moment format=" [ Today ] • " unix>{firstDay.dt}</Moment>
