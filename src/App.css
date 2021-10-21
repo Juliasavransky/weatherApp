@@ -33,8 +33,10 @@ img {
   padding: 0.35em;
   border-radius: 10px;
   width: 80%;
-  background-color: #6e707a;
   font-size: var(--font-Reg);
+  background-color: #6e707a;
+}
+::placeholder{
   color: #fff;
 }
 .container--form {
