@@ -1,6 +1,6 @@
 {
     "apiEndPoint":
-    "http://api.openweathermap.org//data/2.5/forecast?q=${this.state.city}&appid=${API_KEY}&units=imperial"
+    "https://api.openweathermap.org//data/2.5/forecast?q=${this.state.city}&appid=${API_KEY}&units=imperial"
 },
 {
     "API_KEY": "07dd5bdd7ce5d137f005e9455ce2e753"
