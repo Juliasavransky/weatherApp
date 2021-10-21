@@ -35,6 +35,7 @@ img {
   width: 80%;
   font-size: var(--font-Reg);
   background-color: #6e707a;
+  color:#fff;
 }
 ::placeholder{
   color: #fff;
