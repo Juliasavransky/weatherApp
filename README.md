@@ -1,4 +1,6 @@
 ### This a weather app using an openweathermap API
+##### App that shows the weather for 5 days ahead everywhere in the world. On the initial run, the app requests access for the user's location and shows the weather there. The app feature's a search bar allowing the user to get the weather for a specific place they type in. The user can choose between Celsius and Fahrenheit units. The app has a responsive layout.
+
 
 ![Weather App](https://user-images.githubusercontent.com/63636407/115467891-e93faf80-a23a-11eb-8b71-707f6eee5373.jpg)
 
